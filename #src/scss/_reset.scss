@@ -1,23 +1,17 @@
-@charset "UTF-8";
-
 /* Указываем box sizing */
-
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Убираем внутренние отступы */
-
 ul[class],
 ol[class] {
   padding: 0;
 }
 
 /* Убираем внешние отступы */
-
 body,
 h1,
 h2,
@@ -36,7 +30,6 @@ dd {
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
-
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -45,34 +38,28 @@ body {
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-
 ul[class],
 ol[class] {
   list-style: none;
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Упрощаем работу с изображениями */
-
 img {
   max-width: 100%;
   display: block;
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
-
 article > * + * {
   margin-top: 1em;
 }
 
 /* Наследуем шрифты для инпутов и кнопок */
-
 input,
 button,
 textarea,
@@ -81,36 +68,11 @@ select {
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
-
-.banner {
-  background-image: url("../img/BG.png");
-  height: 790px;
-  width: 1920px;
-  margin-top: -70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 @media (prefers-reduced-motion: reduce) {
   * {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-         -o-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }

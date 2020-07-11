@@ -1,6 +1,15 @@
-p{
-  font-size: 40px;
+@import 'reset';
+
+
+
+.banner{
+  background-image: url("../img/BG.png");
+  height: 790px;
+  width: 1920px;
+  margin-top: -70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-body{
-  background-color: aquamarine;
-}
+
