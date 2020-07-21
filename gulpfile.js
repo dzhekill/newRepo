@@ -13,7 +13,7 @@ let path = {
         html : source_folder + "/*.html",
         css : source_folder + "/scss/style.scss",
         js : source_folder + "/js/script.js",
-        img : source_folder + "/img/**/*.{jpg, png, svg, gif, ico, webp}",
+        img : source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts : source_folder + "/fonts/*.ttf",
     },
     watch:{
@@ -32,8 +32,9 @@ let {src, dest} = require('gulp'),
     group_media = require("gulp-group-css-media-queries"),
     clean_css = require("gulp-clean-css"),
     rename = require("gulp-rename"),
-    uglify = require("gulp-uglify-es").default,
-    imagemin = require("gulp-imagemin");
+    im = require("gulp-imagemin"),
+    uglify = require("gulp-uglify-es").default;
+
 
 function browsersync(param) {
     browserSync.init({
@@ -53,7 +54,7 @@ function html(){
 function images(){
     return src(path.src.img)
         .pipe(
-            imagemin({
+            im({
                 progressive:true,
                 svgoPlugins: [
                     {
@@ -116,7 +117,7 @@ function css(){
 
 }
 
-let build = gulp.series(gulp.parallel(js,html,css));
+let build = gulp.series(gulp.parallel(js,html,css,images));
 let watch= gulp.parallel(build, watchFiles, browsersync);
 
 exports.images = images;

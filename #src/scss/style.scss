@@ -1,15 +1,251 @@
 @import 'reset';
+body{
+  font-family: Arial;
+}
 
+.title{
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 100px auto 70px;
+}
+.pic{
+  width: 262px;
+  height: 341px;
+  background-color: #f0f2f1;
+  &:hover{
+    background-color: green;
+  }
+}
+.contacts{
+  display: flex;
+  & p{
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 27px;
+  }
+  & p:not(:last-child){
+    position: relative;
+    margin-right: 40px;
+    &:not(:last-child):after{
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 1px;
+      height: 13px;
+      margin: 6px 0 0 20px ;
+      background-color: #777;
+    }
+  }
+
+}
+.other{
+  display: flex;
+  justify-content: flex-end;
+  & p:last-child{
+    margin: 0;
+  }
+
+  & p{
+    text-transform: uppercase;
+    position: relative;
+    margin-right: 40px;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 27px;
+    &:not(:last-child):after{
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 1px;
+      height: 13px;
+      margin: 6px 0 0 20px ;
+      background-color: #777;
+
+    }
+  }
+}
+
+.heading{
+  font-size: 34px;
+  font-weight: 700;
+  display: block;
+  &--title::after{
+    content: ".";
+    color: red;
+  }
+}
+
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  & a{
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 70px;
+    text-transform: uppercase;
+    color:#000;
+
+  }
+}
+.icons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  & i{
+    display: block;
+    margin-left: 40px;
+
+  }
+}
 
 
 .banner{
-  background-image: url("../img/BG.png");
-  height: 790px;
-  width: 1920px;
-  margin-top: -70px;
+  height: 720px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  text-align: center;
+  &--wrapper{
+    background-image: url("../img/BG.png");
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  &--text{
+    color: #565656;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2.8px;
+  }
+  &--title{
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 70px;
+    color: #000;
+  }
+  &--buttom{
+    width: 170px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #ff5353;
+    display: block;
+    margin: 50px auto 0;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    padding: 15px 0 0;
+    &:hover{
+      text-decoration: none;
+    }
+
+
+
+  }
 }
+
+.featured_product{
+  text-align: center;
+  &--price{
+    margin: 50px 0 70px;
+  }
+  .img{
+    width: 360px;
+    height: 451px;
+    background-color: #f0f2f1;
+  }
+}
+.banner2{
+  height: 630px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  &--wrapper{
+    background-color: #f6f6f6;
+    background-image: linear-gradient(90.0deg, #e9e1d8 0%, #f7f2eb 50%, #e4dacf 100%);
+  }
+  &--heading{
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+  }
+  &--text{
+    font-size: 42px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #4a4a4a;
+  }
+
+}
+
+.most_popular{
+  text-align: center;
+  &--price{
+    margin: 50px 0;
+  }
+  & .dots{
+    display: flex;
+    margin: 0 auto;
+    & div{
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      background-color: #c6b5a1;
+      margin: 0 10px;
+      &:hover{
+        background-color: #ff5353;
+      }
+    }
+  }
+}
+
+.pluses{
+  margin: 100px auto;
+
+  &--part{
+    text-align: center;
+    border: 1px solid #ebeef0;;
+
+    & img{
+      margin: 30px auto;
+    }
+    & h2{
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #000000;
+      line-height: 30px;
+    }
+    & p{
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.025em;
+      color: #888888;
+      margin-bottom: 30px;
+    }
+  }
+
+}
+
+.trending_products{
+  text-align: center;
+  &--price{
+    margin: 50px 0;
+  }
+
+}
+
 
