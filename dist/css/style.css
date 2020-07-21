@@ -351,10 +351,12 @@ body {
 .pluses--part {
   text-align: center;
   border: 1px solid #ebeef0;
+  margin: 10px;
+  max-width: 23%;
 }
 
 .pluses--part img {
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .pluses--part h2 {
@@ -379,6 +381,74 @@ body {
 
 .trending_products--price {
   margin: 50px 0;
+}
+
+.silon_journal p {
+  margin: 30px 0 12px;
+  font-size: 13px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.silon_journal p:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 6px;
+  background-color: #ff5353;
+  border-radius: 2px;
+  margin: 0 10px 2px 0;
+}
+
+.silon_journal h2 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.silon_journal hr {
+  width: 100%;
+  background-color: #888;
+  margin: 30px 0;
+}
+
+.silon_journal span:not(:last-child):before {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/first.png");
+  height: 14px;
+  width: 14px;
+  margin-right: 10px;
+}
+
+.silon_journal span:last-child:before {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/second.png");
+  height: 14px;
+  width: 14px;
+  margin: 0 10px 0 20px;
+}
+
+.silon_journal .image {
+  width: 360px;
+  height: 350px;
+  background-color: #afafaf;
+}
+
+.follow_us .image {
+  width: 262px;
+  height: 250px;
+  background-color: #9a9a9a;
+}
+
+.follow_us .image:hover {
+  background-color: #ff5353;
+  background-image: url("../img/instagram.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (prefers-reduced-motion: reduce) {
