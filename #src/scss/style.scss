@@ -170,7 +170,6 @@ body{
   text-align: center;
   display: flex;
   align-items: center;
-  text-align: center;
   &--wrapper{
     background-color: #f6f6f6;
     background-image: linear-gradient(90.0deg, #e9e1d8 0%, #f7f2eb 50%, #e4dacf 100%);
@@ -316,6 +315,112 @@ body{
 
     }
   }
+}
+
+.footer{
+  margin-top: 100px;
+  padding-top: 40px;
+  padding-top: 40px;
+  &--wrapper{
+    height: 480px;
+    background-color: #000000;
+    background-image: linear-gradient(90.0deg, #e9e1d8 0%, #f7f2eb 50%, #e4dacf 100%);
+  }
+
+  & a{
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #888888;
+    align-self: center;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  & h3{
+    font-size: 16px;
+    line-height: 45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 40px;
+  }
+  .buttom1{
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    img{
+      align-self: center;
+    }
+    span:first-child{
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #4a4a4a;
+
+    }
+    span:last-child{
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #000000;
+    }
+    a{
+      line-height:14px;
+      padding-left: 10px;
+    }
+
+  }
+
+  .buttom2{
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 49px;
+    background-color: #ff5353;
+    border-radius: 3px;
+    margin-left: 10px;
+    img{
+      align-self: center;
+    }
+    span:first-child{
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #4a4a4a;
+    }
+    span:last-child{
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #000000;
+    }
+    a{
+      line-height:14px;
+      padding-left: 10px;
+    }
+  }
+  .buttoms{
+    display: flex;
+  }
+
+
+
+  .right{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #888888;
+    span{
+      color: #ff5353;
+    }
+  }
+
+
 }
 
 
