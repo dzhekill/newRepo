@@ -11,11 +11,12 @@ body{
   margin: 100px auto 70px;
 }
 .pic{
-  width: 262px;
+  width: 100%;
   height: 341px;
   background-color: #f0f2f1;
   &:hover{
     background-color: green;
+    cursor: pointer;
   }
 }
 .contacts{
@@ -101,6 +102,24 @@ body{
   & i{
     display: block;
     margin-left: 40px;
+    position: relative;
+    &:not(:first-child):after{
+      content: "3";
+      padding-top: 3px;
+      position: absolute;
+      display: inline-block;
+      font-size: 10px;
+      text-align: center;
+      width: 16px;
+      height: 16px;
+      background-color: #ff5353;
+      border-radius: 50%;
+      top: -7px;
+      left: 10px;
+      color: white;
+      font-family: Arial;
+
+    }
 
   }
 }
@@ -113,9 +132,10 @@ body{
   text-align: center;
   &--wrapper{
     background-image: url("../img/BG.png");
-    background-position-y: bottom;
+    background-position-y: -90px;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+
   }
   &--text{
     color: #565656;
@@ -147,6 +167,7 @@ body{
     padding: 15px 0 0;
     &:hover{
       text-decoration: none;
+      color: white;
     }
 
 
@@ -160,10 +181,14 @@ body{
     margin: 50px 0 70px;
   }
   .img{
-    width: 360px;
+    width: 100%;
     height: 451px;
     background-color: #f0f2f1;
-  }
+    &:hover{
+      content: "";
+      background-color: red;
+      }
+    }
 }
 .banner2{
   height: 630px;
@@ -206,6 +231,7 @@ body{
       margin: 0 10px;
       &:hover{
         background-color: #ff5353;
+        cursor: pointer;
       }
     }
   }
@@ -218,8 +244,8 @@ body{
   &--part{
     text-align: center;
     border: 1px solid #ebeef0;;
-    margin: 10px;
-    max-width: 23%;
+
+
 
     & img{
       margin: 20px auto;
@@ -250,6 +276,9 @@ body{
 
 }
 .silon_journal{
+  &--part{
+    margin-bottom: 20px;
+  }
   & p{
     margin: 30px 0 12px;
     font-size: 13px;
@@ -285,6 +314,7 @@ body{
     height: 14px;
     width: 14px;
     margin-right: 10px;
+
   }
 
   & span:last-child:before{
@@ -296,7 +326,7 @@ body{
     margin: 0 10px 0 20px;
   }
   & .image{
-    width: 360px;
+    width: 100%;
     height: 350px;
     background-color: #afafaf;
   }
@@ -304,7 +334,7 @@ body{
 
 .follow_us{
   & .image{
-    width: 262px;
+    width: 100%;
     height: 250px;
     background-color: #9a9a9a;
     &:hover{
@@ -312,115 +342,149 @@ body{
       background-image: url("../img/instagram.png");
       background-repeat: no-repeat;
       background-position: center;
+      cursor: pointer;
 
     }
   }
 }
 
-.footer{
+.footer {
   margin-top: 100px;
-  padding-top: 40px;
-  padding-top: 40px;
-  &--wrapper{
-    height: 480px;
+
+  & i {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 8px;
+    margin-right: 10px;
+    &:hover {
+      background-color: #ff5353;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  &--wrapper {
     background-color: #000000;
     background-image: linear-gradient(90.0deg, #e9e1d8 0%, #f7f2eb 50%, #e4dacf 100%);
   }
 
-  & a{
+  & a {
     display: block;
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
     color: #888888;
     align-self: center;
-    &:hover{
+
+    &:hover {
       text-decoration: none;
+      cursor: pointer;
     }
   }
-  & h3{
+
+  & h3 {
     font-size: 16px;
     line-height: 45px;
     font-weight: 700;
     text-transform: uppercase;
     color: #000000;
-    padding-bottom: 40px;
+    padding: 30px 0;
+
+    &:last-child {
+      padding: 0 0 40px 0;
+    }
   }
-  .buttom1{
+
+  .change {
+    padding: 0 0 30px 0;
+  }
+
+  .buttoms {
     display: flex;
-    justify-content: center;
-    width: 130px;
-    height: 50px;
-    background-color: #ffffff;
-    border-radius: 3px;
-    img{
-      align-self: center;
-    }
-    span:first-child{
-      font-size: 10px;
-      font-weight: 400;
-      text-transform: uppercase;
-      color: #4a4a4a;
 
-    }
-    span:last-child{
-      font-size: 13px;
-      font-weight: 500;
-      text-transform: uppercase;
-      color: #000000;
-    }
-    a{
-      line-height:14px;
-      padding-left: 10px;
+    .buttom2 {
+      display: flex;
+      justify-content: center;
+      width: 130px;
+      height: 49px;
+      background-color: #ff5353;
+      border-radius: 3px;
+      margin-left: 10px;
+
+      img {
+        align-self: center;
+      }
+
+      span:first-child {
+        font-size: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #4a4a4a;
+      }
+
+      span:last-child {
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #000000;
+      }
+
+      a {
+        line-height: 14px;
+        padding-left: 10px;
+      }
     }
 
+    .buttom1 {
+      display: flex;
+      justify-content: center;
+      width: 130px;
+      height: 50px;
+      background-color: #ffffff;
+      border-radius: 3px;
+
+      img {
+        align-self: center;
+      }
+
+      span:first-child {
+        font-size: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #4a4a4a;
+
+      }
+
+      span:last-child {
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #000000;
+      }
+
+      a {
+        line-height: 14px;
+        padding-left: 10px;
+      }
+    }
   }
 
-  .buttom2{
-    display: flex;
-    justify-content: center;
-    width: 130px;
-    height: 49px;
-    background-color: #ff5353;
-    border-radius: 3px;
-    margin-left: 10px;
-    img{
-      align-self: center;
-    }
-    span:first-child{
-      font-size: 10px;
-      font-weight: 400;
-      text-transform: uppercase;
-      color: #4a4a4a;
-    }
-    span:last-child{
-      font-size: 13px;
-      font-weight: 500;
-      text-transform: uppercase;
-      color: #000000;
-    }
-    a{
-      line-height:14px;
-      padding-left: 10px;
-    }
-  }
-  .buttoms{
-    display: flex;
-  }
-
-
-
-  .right{
+  .right {
     text-align: center;
     font-size: 14px;
     font-weight: 400;
     color: #888888;
-    span{
+    margin-bottom: 20px;
+
+    span {
       color: #ff5353;
     }
   }
-
-
 }
+
+
+
 
 

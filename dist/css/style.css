@@ -95,13 +95,14 @@ body {
 }
 
 .pic {
-  width: 262px;
+  width: 100%;
   height: 341px;
   background-color: #f0f2f1;
 }
 
 .pic:hover {
   background-color: green;
+  cursor: pointer;
 }
 
 .contacts {
@@ -213,6 +214,24 @@ body {
 .icons i {
   display: block;
   margin-left: 40px;
+  position: relative;
+}
+
+.icons i:not(:first-child):after {
+  content: "3";
+  padding-top: 3px;
+  position: absolute;
+  display: inline-block;
+  font-size: 10px;
+  text-align: center;
+  width: 16px;
+  height: 16px;
+  background-color: #ff5353;
+  border-radius: 50%;
+  top: -7px;
+  left: 10px;
+  color: white;
+  font-family: Arial;
 }
 
 .banner {
@@ -228,9 +247,9 @@ body {
 
 .banner--wrapper {
   background-image: url("../img/BG.png");
-  background-position-y: bottom;
+  background-position-y: -90px;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .banner--text {
@@ -267,6 +286,7 @@ body {
 
 .banner--buttom:hover {
   text-decoration: none;
+  color: white;
 }
 
 .featured_product {
@@ -278,9 +298,14 @@ body {
 }
 
 .featured_product .img {
-  width: 360px;
+  width: 100%;
   height: 451px;
   background-color: #f0f2f1;
+}
+
+.featured_product .img:hover {
+  content: "";
+  background-color: red;
 }
 
 .banner2 {
@@ -292,7 +317,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
 }
 
 .banner2--wrapper {
@@ -342,6 +366,7 @@ body {
 
 .most_popular .dots div:hover {
   background-color: #ff5353;
+  cursor: pointer;
 }
 
 .pluses {
@@ -351,8 +376,6 @@ body {
 .pluses--part {
   text-align: center;
   border: 1px solid #ebeef0;
-  margin: 10px;
-  max-width: 23%;
 }
 
 .pluses--part img {
@@ -381,6 +404,10 @@ body {
 
 .trending_products--price {
   margin: 50px 0;
+}
+
+.silon_journal--part {
+  margin-bottom: 20px;
 }
 
 .silon_journal p {
@@ -433,13 +460,13 @@ body {
 }
 
 .silon_journal .image {
-  width: 360px;
+  width: 100%;
   height: 350px;
   background-color: #afafaf;
 }
 
 .follow_us .image {
-  width: 262px;
+  width: 100%;
   height: 250px;
   background-color: #9a9a9a;
 }
@@ -449,16 +476,29 @@ body {
   background-image: url("../img/instagram.png");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .footer {
   margin-top: 100px;
-  padding-top: 40px;
-  padding-top: 40px;
+}
+
+.footer i {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  text-align: center;
+  padding-top: 8px;
+  margin-right: 10px;
+}
+
+.footer i:hover {
+  background-color: #ff5353;
+  color: white;
+  cursor: pointer;
 }
 
 .footer--wrapper {
-  height: 480px;
   background-color: #000000;
   background-image: -webkit-gradient(linear, left top, right top, from(#e9e1d8), color-stop(50%, #f7f2eb), to(#e4dacf));
   background-image: -o-linear-gradient(left, #e9e1d8 0%, #f7f2eb 50%, #e4dacf 100%);
@@ -477,6 +517,7 @@ body {
 
 .footer a:hover {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .footer h3 {
@@ -485,47 +526,24 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
-  padding-bottom: 40px;
+  padding: 30px 0;
 }
 
-.footer .buttom1 {
+.footer h3:last-child {
+  padding: 0 0 40px 0;
+}
+
+.footer .change {
+  padding: 0 0 30px 0;
+}
+
+.footer .buttoms {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 130px;
-  height: 50px;
-  background-color: #ffffff;
-  border-radius: 3px;
 }
 
-.footer .buttom1 img {
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-.footer .buttom1 span:first-child {
-  font-size: 10px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #4a4a4a;
-}
-
-.footer .buttom1 span:last-child {
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.footer .buttom1 a {
-  line-height: 14px;
-  padding-left: 10px;
-}
-
-.footer .buttom2 {
+.footer .buttoms .buttom2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,34 +557,65 @@ body {
   margin-left: 10px;
 }
 
-.footer .buttom2 img {
+.footer .buttoms .buttom2 img {
   -ms-flex-item-align: center;
       align-self: center;
 }
 
-.footer .buttom2 span:first-child {
+.footer .buttoms .buttom2 span:first-child {
   font-size: 10px;
   font-weight: 400;
   text-transform: uppercase;
   color: #4a4a4a;
 }
 
-.footer .buttom2 span:last-child {
+.footer .buttoms .buttom2 span:last-child {
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
   color: #000000;
 }
 
-.footer .buttom2 a {
+.footer .buttoms .buttom2 a {
   line-height: 14px;
   padding-left: 10px;
 }
 
-.footer .buttoms {
+.footer .buttoms .buttom1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 130px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.footer .buttoms .buttom1 img {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.footer .buttoms .buttom1 span:first-child {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #4a4a4a;
+}
+
+.footer .buttoms .buttom1 span:last-child {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.footer .buttoms .buttom1 a {
+  line-height: 14px;
+  padding-left: 10px;
 }
 
 .footer .right {
@@ -574,6 +623,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: #888888;
+  margin-bottom: 20px;
 }
 
 .footer .right span {
